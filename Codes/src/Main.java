@@ -20,7 +20,7 @@ public class Main {
                 keamanan,
                 "67890",
                 500,
-                "12345_KEY_A1_SERVER-01", // token salah
+                "67890_KEY_A1_SERVER-01", // token salah
                 new int[]{1, 2, 0}
         );
     }
@@ -83,15 +83,6 @@ public class Main {
         }
     }
 
-    public static double getKurs(String negara) {
-        switch (negara) {
-            case "Jepang": return 130;
-            case "Korea": return 12;
-            case "Amerika": return 15000;
-            default: return 1;
-        }
-    }
-
     public static void transaksiLokal(TransferGlobal user, double jumlah) {
         System.out.println("[Transaksi Lokal] " + jumlah);
         user.prosesTransaksi(jumlah);
@@ -104,7 +95,7 @@ public class Main {
 
     public static void konversi(TransferGlobal user, String negara, double jumlah) {
 
-        double kurs = getKurs(negara);
+        double kurs = KursService.getKurs(negara);
         double hasil = user.konversiMataUang(jumlah, kurs);
 
         System.out.println("[Konversi " + negara + "]");
@@ -114,6 +105,6 @@ public class Main {
     }
 
     public static void tampilInfo(TransferGlobal user) {
-        ((Rekening) user).tampilkanInfo();
+        user.tampilkanInfo();
     }
 }

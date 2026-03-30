@@ -14,8 +14,14 @@ public class RekeningValas extends Rekening implements TransferGlobal {
     @Override
     public boolean verifikasiDigital(String token) {
 
+        boolean isBlocked = false;
+// ...
         if (attempt >= 3) {
-            System.out.println("Akun diblokir.");
+            isBlocked = true;
+        }
+
+        if (isBlocked) {
+            System.out.println("Akun diblokir permanen.");
             return false;
         }
 
