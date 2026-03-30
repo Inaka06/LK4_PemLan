@@ -13,5 +13,3 @@ interface LayananInternasional extends Transaksi {
 interface TransferGlobal extends TransaksiDigital, LayananInternasional {
     boolean kirimGlobal(String negaraTujuan, double jumlah);
 }
-
-//test
