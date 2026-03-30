@@ -1,6 +1,6 @@
-public class ProtokolKeamanan {
+public final class ProtokolKeamanan {
 
-    private String serverId;
+    private final String serverId;
 
     private final String[] SECRET_KEYS = {
             "KEY_A1", "KEY_B2", "KEY_C3", "KEY_D4", "KEY_E5"

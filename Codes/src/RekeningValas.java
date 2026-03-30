@@ -1,11 +1,11 @@
-class RekeningValas extends Rekening implements TransferGlobal {
+public class RekeningValas extends Rekening implements TransferGlobal {
 
-    private ProtokolKeamanan keamanan;
-    private String secretKey;
+    private final ProtokolKeamanan keamanan;
+    private final String secretKey;
 
     private int attempt = 0;
 
-    public RekeningValas(String nomorRekening, double saldo  , ProtokolKeamanan keamanan) {
+    public RekeningValas(String nomorRekening, double saldo, ProtokolKeamanan keamanan) {
         super(nomorRekening, saldo);
         this.keamanan = keamanan;
         this.secretKey = keamanan.assignKey();

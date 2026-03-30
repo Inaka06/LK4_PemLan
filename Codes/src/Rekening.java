@@ -1,4 +1,4 @@
-class Rekening {
+public class Rekening {
     protected String nomorRekening;
     protected double saldo;
 

@@ -20,7 +20,7 @@ public class Main {
                 keamanan,
                 "67890",
                 500,
-                "TOKEN_RANDOM_HAHAHAHA", // token salah
+                "12345_KEY_A1_SERVER-01", // token salah
                 new int[]{1, 2, 0}
         );
     }
@@ -37,7 +37,7 @@ public class Main {
 
         System.out.println("\n=== USER: " + noRek + " ===");
 
-        // tampilkan token sekali
+        // 🔥 tampilkan token sekali
         String tokenAsli = user.getTokenAsli();
         System.out.println("Token Anda: " + tokenAsli);
         System.out.println("INGAT TOKEN INI, TIDAK AKAN DITUNJUKKAN LAGI\n");
